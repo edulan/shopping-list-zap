@@ -4,9 +4,9 @@
   "description": "Bot to automate the creation of weekly shopping list",
   "main": "src/index.js",
   "scripts": {
-    "build-min": "browserify src/index.js -t [ babelify --presets [ es2015 ] ] | uglifyjs -c -o dist/index.min.js",
-    "build": "browserify src/index.js -t [ babelify --presets [ es2015 ] ] -o dist/index.js",
-    "watch": "watchify src/index.js -t [ babelify --presets [ es2015 ] ] -o dist/index.js -v",
+    "build-min": "browserify src/index.js -t [ babelify --presets [ es2015 ] ] --node | uglifyjs -c -o dist/index.min.js",
+    "build": "browserify src/index.js -t [ babelify --presets [ es2015 ] ] --node -o dist/index.js",
+    "watch": "watchify src/index.js -t [ babelify --presets [ es2015 ] ] --node -o dist/index.js -v",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
